@@ -1,0 +1,22 @@
+<header class="page-head">
+  <div>
+    <p class="eyebrow">Please confirm</p>
+    <h1>{{heading}}</h1>
+  </div>
+</header>
+
+<!-- message -->
+
+<section class="card card-narrow">
+  <div class="card-body">
+    <div class="alert alert-warning" role="alert">
+      <svg class="icon" aria-hidden="true"><use href="#i-exclamation-triangle"></use></svg>
+      <div><p>{{text}}</p></div>
+    </div>
+    <form class="actions" method="post" action="{{action}}">
+      {{hiddenFields}}
+      <button class="button primary" type="submit">{{confirmLabel}}</button>
+      <a class="button secondary" href="{{cancelHref}}">Cancel</a>
+    </form>
+  </div>
+</section>

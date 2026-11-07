@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Program closed | Course Manager</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600&display=swap">
+  <!-- The server stops right after sending this page, so its styles are kept here instead of in style.css. -->
+  <style>
+    :root { color-scheme: light; }
+    body {
+      margin: 0; min-height: 100vh; box-sizing: border-box; padding: 16px;
+      display: grid; place-items: center;
+      background: #fcfcfb; color: #434b59;
+      font: 14px/1.5 "IBM Plex Sans", "Segoe UI", system-ui, Arial, sans-serif;
+    }
+    .card {
+      max-width: 420px; padding: 32px; text-align: center;
+      background: #fff; border: 1px solid rgba(22, 28, 39, 0.09); border-radius: 10px;
+    }
+    svg { width: 36px; height: 36px; color: #1b6b47; }
+    h1 { margin: 12px 0 6px; color: #161c27; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+    p { margin: 0 0 6px; }
+    .quiet { color: #6b7280; }
+    code {
+      padding: 1px 5px; border: 1px solid rgba(22, 28, 39, 0.09); border-radius: 4px;
+      background: #f7f7f5; color: #161c27; font: 500 12.5px "IBM Plex Mono", Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+    </svg>
+    <h1>The program has closed</h1>
+    <p>{{summary}}</p>
+    <p class="quiet">You can close this tab. Run <code>run.bat</code> to start again.</p>
+  </main>
+</body>
+</html>

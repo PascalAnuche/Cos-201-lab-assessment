@@ -1,0 +1,23 @@
+<header class="page-head">
+  <div>
+    <p class="eyebrow">Program</p>
+    <h1>Exit Program</h1>
+    <p class="page-lead">Stops the program on this computer. Run <code>run.bat</code> to start it again.</p>
+  </div>
+</header>
+
+<!-- message -->
+
+<section class="card card-narrow">
+  <div class="card-body">
+    {{status}}
+    <form class="actions" method="post" action="/exit">
+      <input type="hidden" name="action" value="exit">
+      <button class="button danger" type="submit">
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right-start-on-rectangle"></use></svg>
+        Exit program
+      </button>
+      <a class="button secondary" href="/">Stay</a>
+    </form>
+  </div>
+</section>

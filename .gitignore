@@ -1,0 +1,15 @@
+# Compiled Java classes (run.bat creates these)
+out/
+*.class
+
+# Course lists saved while using the program (keep only the sample)
+data/*
+!data/sample-courses.csv
+
+# Editor and OS files
+.idea/
+.vscode/
+*.iml
+nbproject/
+.DS_Store
+Thumbs.db

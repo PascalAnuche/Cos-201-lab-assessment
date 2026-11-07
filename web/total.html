@@ -1,0 +1,46 @@
+<header class="page-head">
+  <div>
+    <p class="eyebrow">Courses</p>
+    <h1>Compute Total Units</h1>
+    <p class="page-lead">{{summary}}</p>
+  </div>
+</header>
+
+<!-- message -->
+
+<section class="card stats" aria-label="Totals">
+  <div class="stat stat-hero">
+    <span class="stat-label">Total credit units</span>
+    <span class="stat-value">{{totalUnits}}</span>
+    <span class="stat-note">across {{courseCount}} {{courseWord}}</span>
+  </div>
+  <div class="stat">
+    <span class="stat-label">Departments</span>
+    <span class="stat-value">{{departmentCount}}</span>
+    <span class="stat-note">{{departmentList}}</span>
+  </div>
+  <div class="stat">
+    <span class="stat-label">Average</span>
+    <span class="stat-value">{{average}}</span>
+    <span class="stat-note">units per course</span>
+  </div>
+</section>
+
+<section class="card">
+  <div class="card-head">
+    <h2>By department</h2>
+  </div>
+  <div class="card-body">
+    {{composition}}
+  </div>
+</section>
+
+<section class="card">
+  <div class="card-head">
+    <h2>By course</h2>
+    <span class="card-meta">out of {{maxUnits}} units max</span>
+  </div>
+  <div class="card-body">
+    {{breakdown}}
+  </div>
+</section>

@@ -1,0 +1,56 @@
+<header class="page-head">
+  <div>
+    <p class="eyebrow">Courses</p>
+    <h1>Add Course</h1>
+    <p class="page-lead">Codes are tidied for you, so <code>cos201</code> is saved as <code>COS 201</code>.</p>
+  </div>
+</header>
+
+<!-- message -->
+
+<div class="split">
+  <section class="card">
+    <form class="card-body form" method="post" action="/add" novalidate>
+      <div class="field {{codeState}}">
+        <label class="field-label" for="code">Course code</label>
+        <input class="input input-code" id="code" name="code" type="text" value="{{codeValue}}" placeholder="COS 201"
+               autocomplete="off" spellcheck="false" aria-describedby="code-hint code-error" {{codeInvalid}} {{codeFocus}}>
+        <p class="hint" id="code-hint">2 to 4 letters followed by 3 digits.</p>
+        {{codeError}}
+      </div>
+
+      <div class="field {{titleState}}">
+        <label class="field-label" for="title">Course title</label>
+        <input class="input" id="title" name="title" type="text" value="{{titleValue}}" placeholder="Computer Programming I"
+               autocomplete="off" aria-describedby="title-hint title-error" {{titleInvalid}} {{titleFocus}}>
+        <p class="hint" id="title-hint">Up to {{maxTitle}} characters.</p>
+        {{titleError}}
+      </div>
+
+      <div class="field field-short {{unitsState}}">
+        <label class="field-label" for="units">Credit units</label>
+        <input class="input" id="units" name="units" type="text" inputmode="numeric" value="{{unitsValue}}" placeholder="3"
+               autocomplete="off" aria-describedby="units-hint units-error" {{unitsInvalid}} {{unitsFocus}}>
+        <p class="hint" id="units-hint">A whole number from {{minUnits}} to {{maxUnits}}.</p>
+        {{unitsError}}
+      </div>
+
+      <div class="form-foot">
+        <button class="button primary" type="submit">
+          <svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg>
+          Add course
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Already recorded</h2>
+      <span class="card-meta">{{courseCount}} {{courseWord}} &middot; {{totalUnits}} {{unitWord}}</span>
+    </div>
+    <div class="card-body">
+      {{miniList}}
+    </div>
+  </section>
+</div>

@@ -1,0 +1,40 @@
+<header class="page-head">
+  <div>
+    <p class="eyebrow">Course file</p>
+    <h1>Save to File</h1>
+    <p class="page-lead">Saves your list as a CSV file in the <code>data</code> folder.</p>
+  </div>
+</header>
+
+<!-- message -->
+
+{{notice}}
+
+<div class="split">
+  <section class="card">
+    <form class="card-body form" method="post" action="/save" novalidate>
+      <div class="field">
+        <label class="field-label" for="file">File name</label>
+        <input class="input" id="file" name="file" type="text" value="{{fileName}}" autocomplete="off" spellcheck="false"
+               aria-describedby="file-hint">
+        <p class="hint" id="file-hint">Letters, numbers, spaces, - and _ only. ".csv" is added if you leave it off.</p>
+      </div>
+      <div class="form-foot">
+        <button class="button primary" type="submit" {{disabled}}>
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow-down-tray"></use></svg>
+          Save {{courseCount}} {{courseWord}}
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Saved files</h2>
+    </div>
+    <div class="card-body">
+      <p class="path">{{folder}}</p>
+      {{fileList}}
+    </div>
+  </section>
+</div>

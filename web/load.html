@@ -1,0 +1,41 @@
+<header class="page-head">
+  <div>
+    <p class="eyebrow">Course file</p>
+    <h1>Load from File</h1>
+    <p class="page-lead">Opens a list you saved before. It replaces the list you have now.</p>
+  </div>
+</header>
+
+<!-- message -->
+
+{{notice}}
+
+<div class="split">
+  <section class="card">
+    <form class="card-body form" method="post" action="/load" novalidate>
+      <div class="field">
+        <label class="field-label" for="file">File name</label>
+        <input class="input" id="file" name="file" type="text" list="saved-files" value="{{fileName}}"
+               autocomplete="off" spellcheck="false" aria-describedby="file-hint">
+        <datalist id="saved-files">{{fileOptions}}</datalist>
+        <p class="hint" id="file-hint">Type a name, or press Load next to a saved file.</p>
+      </div>
+      <div class="form-foot">
+        <button class="button primary" type="submit">
+          <svg class="icon" aria-hidden="true"><use href="#i-folder-open"></use></svg>
+          Load file
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Saved files</h2>
+    </div>
+    <div class="card-body">
+      <p class="path">{{folder}}</p>
+      {{fileList}}
+    </div>
+  </section>
+</div>

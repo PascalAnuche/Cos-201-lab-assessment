@@ -1,0 +1,27 @@
+<header class="page-head">
+  <div>
+    <p class="eyebrow">Courses</p>
+    <h1>Search Course by Code</h1>
+    <p class="page-lead">Capitals and spaces do not matter, so <code>cos201</code> finds <code>COS 201</code>.</p>
+  </div>
+</header>
+
+<!-- message -->
+
+<section class="card card-narrow">
+  <form class="card-body" method="get" action="/" role="search">
+    <input type="hidden" name="view" value="search">
+    <label class="field-label" for="code">Course code</label>
+    <div class="input-row">
+      <input class="input input-code" id="code" name="code" type="search" value="{{searchValue}}" placeholder="COS 201"
+             autocomplete="off" spellcheck="false" autofocus>
+      <button class="button primary" type="submit">
+        <svg class="icon" aria-hidden="true"><use href="#i-magnifying-glass"></use></svg>
+        Search
+      </button>
+    </div>
+  </form>
+  <div class="card-body card-body-ruled">
+    {{result}}
+  </div>
+</section>
